@@ -1,0 +1,51 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+  }
+  
+  #controls {
+    padding: 10px;
+    background: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #controls label {
+    font-weight: bold;
+  }
+  
+  #container {
+    width: 100vw;
+    height: calc(100vh - 60px);
+  }
+  
+  input[type="text"],
+  input[type="file"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #areaDisplay {
+    font-weight: bold;
+    color: #333;
+  }
+  

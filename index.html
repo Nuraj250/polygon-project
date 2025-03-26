@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polygon Drawing Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/konva@9/konva.min.js"></script>
+</head>
+<body>
+  <div id="controls">
+    <label for="scaleInput">Scale (e.g. 1:10):</label>
+    <input type="text" id="scaleInput" value="1:1">
+    <button onclick="saveSketch()">Save</button>
+    <input type="file" id="loadFile" accept="application/json" />
+    <button onclick="resetCanvas()">Reset</button>
+    <span id="areaDisplay"></span>
+  </div>
+  <div id="container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
