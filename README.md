@@ -53,7 +53,7 @@ A simple, intuitive polygon drawing tool built using **Konva.js**. Allows users 
 Clone or download this repository:
 
 ```bash
-git clone <your-github-repo-link>
+git clone https://github.com/Nuraj250/polygon-project.git
 ```
 
 ### **Running the Tool**
