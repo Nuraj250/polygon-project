@@ -36,9 +36,10 @@ const redraw = () => {
 
 // Draw line between two points with dimension label
 const drawLine = (p1, p2) => {
+    const scaleFactor = getScale();
     layer.add(new Konva.Line({ points: [p1.x, p1.y, p2.x, p2.y], stroke: '#333', strokeWidth: 2, name: 'temp' }));
     const mid = [(p1.x + p2.x) / 2, (p1.y + p2.y) / 2];
-    const dist = (distance(p1, p2) * getScale()).toFixed(2);
+    const dist = (distance(p1, p2) * scaleFactor).toFixed(2);
     layer.add(new Konva.Text({ x: mid[0], y: mid[1], text: `${dist} units`, fontSize: 14, fill: 'green', name: 'temp' }));
 };
 
@@ -77,6 +78,12 @@ const getScale = () => {
     const [a, b] = scaleInput.value.split(':').map(Number);
     return (a && b) ? b / a : 1;
 };
+
+// Update canvas when scale changes
+scaleInput.addEventListener('input', () => {
+    redraw();
+    if (isClosed) calculateArea();
+});
 
 // Save current sketch as JSON file
 const saveSketch = () => {
