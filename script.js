@@ -122,6 +122,5 @@ document.getElementById('loadFile').addEventListener('change', ({ target }) => {
 
         newStage.draw();
     };
-
     reader.readAsText(file);
 });
